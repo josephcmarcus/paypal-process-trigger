@@ -12,7 +12,8 @@ module.exports = async function (context, myTimer) {
         Accept: '*/*',
       },
     });
-    context.log(`Trigger succeeded at ${date}`)
+    context.log(`Trigger succeeded at ${date}. ${response}`);
+    return response;
   } catch (err) {
     context.log(`Trigger failed at ${date}: ${err}`)
   }
