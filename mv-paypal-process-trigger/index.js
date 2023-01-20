@@ -7,7 +7,7 @@ module.exports = async function (context, myTimer) {
 
     const response = await axios({
       method: 'get',
-      url: `${process.env.PAYPAL_PROCESS_SERVICE_URL}?code=${process.env.AUTH_CODE}`,
+      url: `${process.env.URL}?code=${process.env.AUTH_CODE}`,
       headers: {
         Accept: '*/*',
         'Accept-Encoding': 'gzip, deflate, br',
